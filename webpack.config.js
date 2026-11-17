@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -6,22 +7,20 @@ module.exports = {
   entry: "./src/script.js",
   output: {
     clean: true,
-    filename: "main.js",
+    filename: "script.js",
     libraryTarget: "window",
     path: path.resolve(__dirname, "dist"),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      favicon: "./src/favicon.ico",
+      inject: false,
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "./src/style.css", to: "style.css" },
+        { from: "./src/favicon.ico", to: "favicon.ico" },
+      ],
     }),
   ],
 };

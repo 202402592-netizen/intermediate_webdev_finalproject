@@ -1,7 +1,3 @@
-if (typeof document !== "undefined") {
-  require("./style.css");
-}
-
 const calculateSimpleInterest = (principal, rate, time) =>
   (principal * rate * time) / 100;
 
