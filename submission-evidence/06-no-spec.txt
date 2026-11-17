@@ -1,0 +1,10 @@
+Command: npx jasmine
+
+Randomized with seed 83973
+Started
+
+
+No specs found
+Finished in 0.001 seconds
+Incomplete: No specs found
+Randomized with seed 83973 (jasmine --random=true --seed=83973)

@@ -1,0 +1,11 @@
+Command: npx webpack
+
+asset main.js 7.06 KiB [compared for emit] [minimized] (name: main)
+asset favicon.ico 5.14 KiB [compared for emit]
+asset index.html 1.23 KiB [compared for emit] [minimized]
+webpack 5.112.2 compiled successfully in 1099 ms
+
+Generated dist directory:
+- favicon.ico (5263 bytes)
+- index.html (1260 bytes)
+- main.js (7226 bytes)
